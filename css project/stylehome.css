@@ -1,0 +1,65 @@
+.bg{
+    width:1519px;
+    height:800px;
+    background-color:black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+}
+.gta{
+    width:1350px;
+    object-fit: contain;
+    position:relative;
+    left:70px;
+    animation-name: example;
+    animation-duration: 3s; 
+    animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes example {
+    from {top: -1000px;}
+    to {top: -50px;}
+}
+
+.button {
+    border-radius: 4px;
+    background:none; 
+    border:4px solid;
+    color: white;
+    font-weight:500;
+    text-transform:uppercase;  
+    text-align: center;
+    font-size: 30px;
+    width: 200px;
+    padding:10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    position:absolute;
+    left:650px;
+    bottom:180px;
+  }
+  .button::before,.button::after{
+    content: "";
+    position:absolute;
+    width:14px;
+    height:4px;
+    background:black;
+    transform:skewX(50deg);
+    transition: .4s linear;
+  }
+  .button::before{
+    top:-4px;
+    left:10%;
+  }
+  .button:hover::before{
+    left:80%;
+  }
+  .button::after{
+    bottom:-4px;
+    right:10%;
+  }
+  .button:hover::after{
+    right:80%;
+  }
